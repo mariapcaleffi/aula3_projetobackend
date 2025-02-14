@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Controle de Tarefas</title>
+</head>
+
+<body>
+    <header>
+        <h1>Controle de Tarefas</h1>
+    </header>
+    <main>
+        <section>
+            <h2>Cadastro de Tarefa</h2>
+            <form id="cadastro">
+                <input type="text" name="nome" placeholder="Nome da tarefa" required>
+                <input type="date" name="data" required>
+                <input type="number" name="progresso" placeholder="Progresso (0 a 100)" required>
+                <button type="submit">Cadastrar</button>
+            </form>
+        </section>
+
+        <section>
+            <h2>Tarefas</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Id</th>
+                        <th>Nome</th>
+                        <th>Data</th>
+                        <th>Progresso</th>
+                        <th>Ações</th>
+                    </tr>
+                </thead>
+                <tbody id="tarefas">
+                </tbody>
+            </table>
+        </section>
+
+        <!-- Formulário de Edição -->
+        <section id="edicao" style="display: none;">
+            <h2>Editar Tarefa</h2>
+            <form id="editar">
+                <input type="hidden" name="id_tarefa" id="id_tarefa">
+                <input type="text" name="nome" id="nome_tarefa" placeholder="Nome da tarefa" required>
+                <input type="date" name="data" id="data_tarefa" required>
+                <input type="number" name="progresso" id="progresso_tarefa" placeholder="Progresso (0 a 100)" required>
+                <button type="submit">Atualizar</button>
+                <button type="button" onclick="cancelarEdicao()">Cancelar</button>
+            </form>
+        </section>
+    </main>
+    <footer>feito por Heloísa, Lucas Menegon e Maria</footer>
+</body>
+<script src="script.js"></script>
+
+</html>
